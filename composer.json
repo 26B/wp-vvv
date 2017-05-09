@@ -1,0 +1,48 @@
+{
+  "name": "xipasduarte/wp-seed",
+  "description": "WordPress VVV 2 project boilerplate.",
+  "authors": [
+    {
+      "name": "Pedro Duarte",
+      "email": "xipasduarte@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "composer-plugin-api": "^1.1",
+    "goblindegook/syllables": "~0.3",
+    "wpackagist-plugin/akismet": "~3.1",
+    "wpackagist-plugin/autoptimize": "~2.0",
+    "wpackagist-plugin/disable-emojis": "~1.5",
+    "wpackagist-plugin/disable-xml-rpc": "~1.0",
+    "wpackagist-plugin/force-regenerate-thumbnails": "~2.0"
+  },
+  "require-dev": {
+    "rarst/laps": "~1.2",
+    "wp-sync-db/wp-sync-db": "dev-master",
+    "wp-sync-db/wp-sync-db-media-files": "dev-master",
+    "wpackagist-plugin/genesis-visual-hook-guide": "^0.9.5",
+    "wpackagist-plugin/redis-cache": "^1.3",
+    "wpackagist-plugin/wp-hydra": "~1.1",
+    "wpackagist-plugin/wordpress-importer": "^0.6.3"
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/{$vendor}/{$name}/": [
+        "goblindegook/syllables"
+      ],
+      "wp-content/mu-plugins/{$name}/": [
+        "wpackagist-plugin/disable-emojis",
+        "wpackagist-plugin/disable-xml-rpc"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
