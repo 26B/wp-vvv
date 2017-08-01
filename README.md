@@ -1,12 +1,6 @@
 # WP Seed
 
-This project aims to allow a for a quick start of WordPress project with a configuration for VVV 2.0 and several boilerplate themes.
-
-## Dependencies (Must Have Genesis)
-
-This setup requires you to have Genesis main theme (the Genesis Framework) in order for its child-theme to work. You can get it here: http://my.studiopress.com/themes/genesis/
-
-Note: Without this theme you can still take some things from the VVV configurations and Gulp setup in the child theme.
+This project aims to allow a for a quick start of WordPress project with a configuration for VVV 2.0.
 
 ## Introduction
 
@@ -32,10 +26,26 @@ $ git clone git@github.com:xipasduarte/wp-seed.git wp-seed
 
 This should create a new directory called `wp-seed` containing all the project files.
 
+Add the site to your `vvv-custom.yml` (if you don't know what this is, check out [the documentation](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/)):
+
+```
+wp-seed:
+  hosts:
+    - wp-seed.dev
+```
+
 We're not done yet: VVV needs to setup and incorporate the project into its configuration. That is achieved by running:
 
 ```
-$ vagrant provision
+$ vagrant provision --provision-with site-wp-seed
 ```
 
-Take a break while VVV updates itself and builds the project for you. When done, a new site will become available at http://genesis.wordpress.dev/ and you may get to work.
+## What now?
+
+This project is meant to be all about giving you a head start in setting up the WordPress environment for development. It also provides several helpful scripts and tries to make good choices in what is setup for you.
+
+### There's no theme dude!
+
+You're darn right! There is no themes folder at all, so you are free to plug in any theme base/starter you'd like.
+
+If I may offer a suggestion it would be to use the Genesis Framework and start with this starter child-theme: [Genesis Starter](https://github.com/goblindegook/genesis-starter). However, any selection you make will surely be wise.
