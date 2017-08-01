@@ -18,9 +18,8 @@ node_modules/
 
 # themes
 /wp-content/themes/*
-!/wp-content/themes/genesis-starter
-/wp-content/themes/genesis-starter/public/
-/wp-content/themes/genesis-starter/*.css
+# Include your theme like this:
+#!/wp-content/themes/your-theme
 
 # jetbrains
 .idea/
