@@ -27,12 +27,3 @@ fi
 
 echo -e "${GREEN}Installing Composer dependencies…${NC}"
 composer install --no-interaction $OPT_COMPOSER
-
-echo -e "${GREEN}Installing NPM dependencies…${NC}"
-npm install
-
-echo -e "${GREEN}Building theme…${NC}"
-cd "$ROOT/wp-content/themes/genesis-starter"
-composer install --no-interaction $OPT_COMPOSER
-npm install
-npm run build

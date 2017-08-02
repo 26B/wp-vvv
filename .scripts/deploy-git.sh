@@ -62,11 +62,15 @@
     $ENVIRONMENT = $(git symbolic-ref --short HEAD)
   fi
 
+  if [ -z "$DESTINATION" ]; then
+    $DESTINATION = 'origin';
+  fi
+
   # Get around Codeship's shallow clones:
   git pull --unshallow
 
   # BUILD THE PROJECT
-  # ==================
+  # =================
 
   echo -e "${YELLOW}Cloning the project for building...${RESET}"
 
@@ -120,6 +124,13 @@
 
   git add --all .
   git commit -m "Deployment on ${DEPLOY_DATE} [skip ci]"
+
+  # Change destination repository.
+  if [ $DESTINATION != 'origin' ]; then
+    git remote set-url origin $DESTINATION
+  fi
+
+  # Push changes.
   git push -u origin "deploy/${ENVIRONMENT}"
 
   # CLEANUP
