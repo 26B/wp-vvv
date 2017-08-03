@@ -9,6 +9,9 @@ node_modules/
 # build directories
 /_deploy_*/
 
+# vvv
+/wp-config-vvv.php
+
 # plugins
 /wp-content/mu-plugins/*
 !/wp-content/mu-plugins/autoload.php

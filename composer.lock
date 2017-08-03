@@ -283,15 +283,15 @@
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "3.3.3",
+            "version": "3.3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.3.3"
+                "reference": "tags/3.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.3.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -535,7 +535,7 @@
                 "wordpress",
                 "wp-sync-db"
             ],
-            "time": "2016-04-24T08:56:12+00:00"
+            "time": "2016-04-24 08:56:12"
         },
         {
             "name": "wp-sync-db/wp-sync-db-media-files",
@@ -567,7 +567,7 @@
                 "wordpress",
                 "wp-sync-db"
             ],
-            "time": "2016-03-07T16:34:12+00:00"
+            "time": "2016-03-07 16:34:12"
         },
         {
             "name": "wpackagist-plugin/redis-cache",
