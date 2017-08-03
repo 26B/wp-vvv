@@ -1,6 +1,6 @@
 # WP Seed
 
-This project aims to allow a for a quick start of WordPress project with a configuration for VVV 2.0.
+This project aims to allow for a quick start in developing and deploying, of WordPress projects with a configuration for VVV 2.0.
 
 ## Introduction
 
