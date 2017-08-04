@@ -10,20 +10,21 @@ node_modules/
 /_deploy_*/
 
 # vvv
+/log/
 /wp-config-vvv.php
 
 # plugins
-/wp-content/mu-plugins/*
-!/wp-content/mu-plugins/autoload.php
-!/wp-content/mu-plugins/fix-annoyances.php
-!/wp-content/mu-plugins/https.php
-!/wp-content/mu-plugins/muddle.php
-/wp-content/plugins/*
+/content/mu-plugins/*
+!/content/mu-plugins/autoload.php
+!/content/mu-plugins/fix-annoyances.php
+!/content/mu-plugins/https.php
+!/content/mu-plugins/muddle.php
+/content/plugins/*
 
 # themes
-/wp-content/themes/*
+/content/themes/*
 # Include your theme like this:
-#!/wp-content/themes/your-theme
+#!/content/themes/your-theme
 
 # jetbrains
 .idea/
@@ -65,30 +66,28 @@ Thumbs.db
 /core/
 
 # wordpress specific
-wp-config.php
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
+content/uploads/
+content/blogs.dir/
+content/upgrade/*
+content/backup-db/*
+content/advanced-cache.php
+content/wp-cache-config.php
+content/cache/*
+content/cache/supercache/*
 
 # wpengine specific
 .smushit-status
 .gitattributes
 _wpeprivate
-wp-content/object-cache.php
-wp-content/mu-plugins/mu-plugin.php
-wp-content/mu-plugins/slt-force-strong-passwords.php
-wp-content/mu-plugins/limit-login-attempts
-wp-content/mu-plugins/wpengine-common
-wp-content/mysql.sql
+content/object-cache.php
+content/mu-plugins/mu-plugin.php
+content/mu-plugins/slt-force-strong-passwords.php
+content/mu-plugins/limit-login-attempts
+content/mu-plugins/wpengine-common
+content/mysql.sql
 
 # wp core (as of 3.4.1)
 /db-config.php
-/index.php
 /license.txt
 /readme.html
 /wp-activate.php
@@ -115,19 +114,19 @@ wp-content/mysql.sql
 /xmlrpc.php
 /wp-admin
 /wp-includes
-/wp-content/index.php
-/wp-content/languages/themes/twentytwelve*
-/wp-content/languages/themes/twentythirteen*
-/wp-content/languages/themes/twentyfourteen*
-/wp-content/languages/themes/twentyfifteen*
-/wp-content/themes/twentyten
-/wp-content/themes/twentyeleven
-/wp-content/themes/twentytwelve
-/wp-content/themes/twentythirteen
-/wp-content/themes/twentyfourteen
-/wp-content/themes/twentyfifteen
-/wp-content/themes/index.php
-/wp-content/plugins/index.php
+/content/index.php
+/content/languages/themes/twentytwelve*
+/content/languages/themes/twentythirteen*
+/content/languages/themes/twentyfourteen*
+/content/languages/themes/twentyfifteen*
+/content/themes/twentyten
+/content/themes/twentyeleven
+/content/themes/twentytwelve
+/content/themes/twentythirteen
+/content/themes/twentyfourteen
+/content/themes/twentyfifteen
+/content/themes/index.php
+/content/plugins/index.php
 
 # large/disallowed file types
 # a CDN should be used for these
