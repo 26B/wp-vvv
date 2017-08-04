@@ -3,7 +3,6 @@
 ## CONFIGURATION ##
 
 DOMAIN=`get_primary_host "${VVV_SITE_NAME}".dev`
-DOMAINS=`get_hosts "${DOMAIN}"`
 SITE_TITLE=`get_config_value 'site_title' "${DOMAIN}"`
 WP_TYPE=`get_config_value 'wp_type' 'single'`
 DB_NAME=`get_config_value 'db_name' "${VVV_SITE_NAME}_dev"`
@@ -30,10 +29,11 @@ echo -e "\n DB operations done.\n\n"
 if [[ ! -f "${VVV_PATH_TO_SITE}/wp-config-vvv.php" ]]; then
   export DOMAIN
   export DB_NAME
-  export DB_USER=`get_config_value 'db_name' 'wp'`
-  export DB_PASSWORD=`get_config_value 'db_name' 'wp'`
+  export DB_USER=`get_config_value 'db_user' 'wp'`
+  export DB_PASSWORD=`get_config_value 'db_password' 'wp'`
   export DB_HOST=`get_config_value 'db_host' 'localhost'`
-  export DB_CHARSET=`get_config_value 'db_collate' 'utf8mb4'`
+  export DB_CHARSET=`get_config_value 'db_charset' 'utf8mb4'`
+  export DB_COLLATION=`get_config_value 'db_collate' 'utf8mb4_general_ci'`
   export TABLE_PREFIX=`get_config_value 'table_prefix' 'wp_'`
 
   noroot ./vvv-wp-config.sh

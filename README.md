@@ -40,6 +40,37 @@ We're not done yet: VVV needs to setup and incorporate the project into its conf
 $ vagrant provision --provision-with site-wp-seed
 ```
 
+### Further configuration
+
+You can configure your site right from the YAML block you just entered, just use the `custom:` key to set your particular settings. For example, let's say you want a different database name (other than the default that is created using the site name):
+
+```
+wp-seed:
+  hosts:
+    - wp-seed.dev
+  custom:
+    - db_name: special_db_name
+```
+That's all you need!
+
+The following table specifies all the variables you can set in `vvv-costum.yml` and their respective defaults.
+
+| Variable       | Description                | Possible Values                       | Default                       |
+| -------------- | -------------------------- | ------------------------------------- | ----------------------------- |
+| `site_title`   | The site's title           | Any string                            | Primary domain                |
+| `wp_type`      | Type of installation       | `single`, `subdirectory`, `subdomain` | `single`                      |
+| `db_name`      | Database name              | Valid MySQL database name             | `[escaped_vvv_site_name]_dev` |
+| `db_user`      | Database user              |                                       | `wp`                          |
+| `db_password`  | Database password for user |                                       | `wp`                          |
+| `db_host`      | Database hostname          | Hostname                              | `localhost`                   |
+| `db_charset`   | Database charset           | [MySQL Charset Sets and Collation][1] | `utf8mb4`                     |
+| `db_collate`   | Database collation         | [MySQL Charset Sets and Collation][1] | `utf8mb4_general_ci`          |
+| `table_prefix` | Database table prefix      |                                       | `wp_`                         |
+| `wp_plugins`   | The plugins to activate    |                                       |                               |
+| `wp_theme`     | The theme to activate      |                                       |                               |
+
+[1]: https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html
+
 ## What now?
 
 This project is meant to be all about giving you a head start in setting up the WordPress environment for development. It also provides several helpful scripts and tries to make good choices in what is setup for you.
