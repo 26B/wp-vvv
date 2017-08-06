@@ -61,10 +61,6 @@ if ! $(noroot wp core is-installed); then
   fi
 
   noroot wp core ${INSTALL_COMMAND} --url="${DOMAIN}" --quiet --title="${SITE_TITLE}" --admin_name=admin --admin_email="admin@wp-seed.dev" --admin_password="password"
-
-  # WP-CLI seems to be using the core folder.
-  echo ${DOMAIN}
-  noroot wp option update 'home' "http://${DOMAIN}"
 else
   echo "Updating WordPress..."
   cd ${VVV_PATH_TO_SITE}
