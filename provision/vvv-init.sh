@@ -27,6 +27,7 @@ echo -e "\n DB operations done.\n\n"
 
 # Configure WordPress.
 if [[ ! -f "${VVV_PATH_TO_SITE}/wp-config-vvv.php" ]]; then
+  export WP_TYPE
   export DOMAIN
   export DB_NAME
   export DB_USER=`get_config_value 'db_user' 'wp'`
