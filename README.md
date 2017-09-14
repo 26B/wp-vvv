@@ -49,7 +49,7 @@ wp-seed:
   hosts:
     - wp-seed.dev
   custom:
-    - db_name: special_db_name
+    db_name: special_db_name
 ```
 That's all you need!
 
