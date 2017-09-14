@@ -62,6 +62,11 @@ if ! $(noroot wp core is-installed); then
   fi
 
   noroot wp core ${INSTALL_COMMAND} --url="${DOMAIN}" --quiet --title="${SITE_TITLE}" --admin_name=admin --admin_email="admin@wp-seed.dev" --admin_password="password"
+
+  # Fallback theme.
+  if [ "${THEME}" = "" ]; then
+    noroot wp theme install --activate twentyseventeen
+  fi
 else
   echo "Updating WordPress..."
   cd ${VVV_PATH_TO_SITE}
