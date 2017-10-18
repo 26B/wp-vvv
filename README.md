@@ -49,11 +49,11 @@ wp-seed:
   hosts:
     - wp-seed.dev
   custom:
-    - db_name: special_db_name
+    db_name: special_db_name
 ```
 That's all you need!
 
-The following table specifies all the variables you can set in `vvv-costum.yml` and their respective defaults.
+The following table specifies all the variables you can set in `vvv-custom.yml` and their respective defaults.
 
 | Variable       | Description                | Possible Values                       | Default                       |
 | -------------- | -------------------------- | ------------------------------------- | ----------------------------- |

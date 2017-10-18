@@ -78,3 +78,16 @@ if ( defined( 'DOMAIN_MAPPING' ) ) {
 		\add_filter( 'plugins_url', 'annoyance_domain_mapping_plugins_uri', 1 );
 	} );
 }
+
+/**
+ * Fix network url for WP-Seed or sub-folder WordPress instalations.
+ *
+ * @since 1.1.0
+ */
+\add_filter( 'network_admin_url', function( $url, $path ) {
+	if ( ! is_multisite() ) {
+		return $url;
+	}
+	$url = network_site_url( 'core/wp-admin/network/', 'admin' );
+	return $url . ltrim($path, '/');
+}, 10, 2 );

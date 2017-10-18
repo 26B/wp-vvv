@@ -34,6 +34,16 @@ echo -e "define( 'WP_DEBUG_DISPLAY', false );" >> wp-config-vvv.php
 echo -e "@ini_set( 'display_errors', 0 );" >> wp-config-vvv.php
 echo -e "define( 'SAVEQUERIES', false );" >> wp-config-vvv.php
 
+if [ "${WP_TYPE}" != "single" ]; then
+  echo -e "\n/** Multisite constants. */" >> wp-config-vvv.php
+  echo -e "define( 'WP_ALLOW_MULTISITE', true );" >> wp-config-vvv.php
+  echo -e "define( 'DOMAIN_CURRENT_SITE', '${DOMAIN}' );" >> wp-config-vvv.php
+  echo -e "define( 'SITE_ID_CURRENT_SITE', 1 );" >> wp-config-vvv.php
+fi
+if [ "${WP_TYPE}" = "subdomain" ]; then
+  echo -e "define( 'SUBDOMAIN_INSTALL', true );" >> wp-config-vvv.php
+fi
+
 echo -e "\n/** Define cache constants. */" >> wp-config-vvv.php
 echo -e "define( 'WP_CACHE', true );" >> wp-config-vvv.php
 echo -e "define( 'WP_CACHE_KEY_SALT', '${WP_CACHE_KEY_SALT}' );" >> wp-config-vvv.php

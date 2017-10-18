@@ -74,6 +74,7 @@ content/advanced-cache.php
 content/wp-cache-config.php
 content/cache/*
 content/cache/supercache/*
+content/languages/
 
 # wpengine specific
 .smushit-status
