@@ -1,5 +1,5 @@
 {
-  "name": "xipasduarte/wp-seed",
+  "name": "WP-Seed/wp-seed",
   "description": "WordPress VVV 2 project boilerplate.",
   "authors": [
     {
@@ -32,19 +32,13 @@
   },
   "extra": {
     "installer-paths": {
-      "vendor/{$vendor}/{$name}/": [
-        "goblindegook/syllables"
-      ],
+      "vendor/{$vendor}/{$name}/": ["goblindegook/syllables"],
       "content/mu-plugins/{$name}/": [
         "wpackagist-plugin/disable-emojis",
         "wpackagist-plugin/disable-xml-rpc"
       ],
-      "content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "content/themes/{$name}/": [
-        "type:wordpress-theme"
-      ]
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "core"
   },
