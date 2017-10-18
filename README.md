@@ -21,7 +21,7 @@ This project should be added to the `www` directory in your VVV setup.  If you'v
 Now clone the project into the `www` folder:
 
 ```
-$ git clone git@github.com:xipasduarte/wp-seed.git wp-seed
+$ git clone git@github.com:WP-Seed/wp-seed.git wp-seed
 ```
 
 This should create a new directory called `wp-seed` containing all the project files.

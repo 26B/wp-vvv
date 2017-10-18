@@ -5,7 +5,7 @@
  * Description: Autoloads Composer dependencies at project root.
  * Version:     1.0.0
  * Author:      Pedro Duarte
- * Author URI:  https://github.com/xipasduarte/
+ * Author URI:  https://github.com/WP-Seed/
  * License:     GPL-2.0+
  */
 
