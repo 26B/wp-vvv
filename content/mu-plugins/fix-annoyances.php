@@ -4,7 +4,7 @@
  * Plugin Name: Fix WP Annoyances
  * Description: Fixes annoyances in WordPress.
  * Version:     1.0.0
- * Author:      Pedro Duarte
+ * Author:      WP-Seed
  * Author URI:  https://github.com/WP-Seed/
  * License:     GPL-2.0+
  */
@@ -80,14 +80,19 @@ if ( defined( 'DOMAIN_MAPPING' ) ) {
 }
 
 /**
- * Fix network url for WP-Seed or sub-folder WordPress instalations.
+ * Fix network url for subdomain or subdirectory WordPress instalations.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 \add_filter( 'network_admin_url', function( $url, $path ) {
-	if ( ! is_multisite() ) {
+
+	if ( ! \is_multisite() ) {
 		return $url;
 	}
-	$url = network_site_url( 'core/wp-admin/network/', 'admin' );
-	return $url . ltrim($path, '/');
+
+	return sprintf(
+		'%s%s',
+		\network_site_url( 'core/wp-admin/network/', 'admin' ),
+		ltrim( $path, '/' )
+	);
 }, 10, 2 );
