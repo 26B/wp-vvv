@@ -1,15 +1,15 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: HTTPS
+ * Plugin Name: Fix HTTPS
  * Description: Fixes and improves HTTPS support.
- * Version:     2.0.0
- * Author:      Pedro Duarte
- * Author URI:  https://github.com/xipasduarte
+ * Version:     1.0.0
+ * Author:      WP-Seed
+ * Author URI:  https://github.com/WP-Seed
  * License:     GPL-2.0+
  */
 
-namespace xipasduarte\WP\HTTPS;
+namespace WPSeed\WP\Plugin\HTTPS;
 
 /**
  * Force URLs in srcset attributes into HTTPS scheme.
@@ -24,11 +24,11 @@ function wp_calculate_image_srcset( $sources ) {
 	}
 	return $sources;
 }
+\add_filter( 'wp_calculate_image_srcset', '\WPSeed\WP\Plugin\HTTPS\wp_calculate_image_srcset', 10, 1 );
 
 /**
  * Replace http:// with https:// in the embed code (before caching).
  *
- * @since 2.0.0 Changed the function's name to something more meaningfull.
  * @since 1.0.0
  * @param string $data The returned oEmbed HTML.
  * @param string $url  URL of the content to be embedded.
@@ -37,11 +37,11 @@ function wp_calculate_image_srcset( $sources ) {
 function secure_oembed_result( $data, $url, $args ) {
 	return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $data ) : $data;
 }
+\add_filter( 'oembed_result', '\WPSeed\WP\Plugin\HTTPS\secure_oembed_result',      10, 3 );
 
 /**
  * Replace http:// with https:// in the embed code (after caching).
  *
- * @since 2.0.0 Changed the function's name to something more meaningfull.
  * @since 1.0.0
  * @param mixed  $cache   The cached HTML result, stored in post meta.
  * @param string $url     The attempted embed URL.
@@ -51,7 +51,4 @@ function secure_oembed_result( $data, $url, $args ) {
 function secure_embed_oembed_html( $cache, $url, $attr, $post_id ) {
 	return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $cache ) : $cache;
 }
-
-\add_filter( 'wp_calculate_image_srcset', '\xipasduarte\WP\HTTPS\wp_calculate_image_srcset', 10, 1 );
-\add_filter( 'oembed_result',             '\xipasduarte\WP\HTTPS\secure_oembed_result',      10, 3 );
-\add_filter( 'embed_oembed_html',         '\xipasduarte\WP\HTTPS\secure_embed_oembed_html',  10, 4 );
+\add_filter( 'embed_oembed_html', '\WPSeed\WP\Plugin\HTTPS\secure_embed_oembed_html',  10, 4 );

@@ -4,7 +4,7 @@
  * Plugin Name: Autoload Composer Dependencies
  * Description: Autoloads Composer dependencies at project root.
  * Version:     1.0.0
- * Author:      Pedro Duarte
+ * Author:      WP-Seed
  * Author URI:  https://github.com/WP-Seed/
  * License:     GPL-2.0+
  */
