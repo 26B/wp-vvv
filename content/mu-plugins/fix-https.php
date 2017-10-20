@@ -1,7 +1,7 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: HTTPS
+ * Plugin Name: Fix HTTPS
  * Description: Fixes and improves HTTPS support.
  * Version:     1.0.0
  * Author:      WP-Seed

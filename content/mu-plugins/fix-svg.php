@@ -1,7 +1,7 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: SVG
+ * Plugin Name: Fix SVG
  * Description: Fixes and improves SVG support.
  * Version:     1.0.0
  * Author:      WP-Seed
