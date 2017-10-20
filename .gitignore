@@ -19,7 +19,7 @@ node_modules/
 !/content/mu-plugins/fix-annoyances.php
 !/content/mu-plugins/fix-svg.php
 !/content/mu-plugins/fix-https.php
-!/content/mu-plugins/muddle.php
+!/content/mu-plugins/loader.php
 /content/plugins/*
 
 # themes
