@@ -1,16 +1,12 @@
 #!/bin/bash
 
-# Intended to deploy a Composer controlled repo to WP Engine.
+# Intended to deploy a Composer controlled repo to WPEngine.
 #
-# Usage: ./deploy-wpengine.sh -m <commit message> -s <site> [--live]
+# Usage: ./deploy-wpengine.sh -m <commit message> -s <sitename> [--live]
 
 # TODO: Handle Git submodules
 
 (
-  # URESETomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
 
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
@@ -49,7 +45,7 @@
   fi
 
   if [ -z "$COMMIT_MSG" ]; then
-    echo -e "${RED}Please provide a commit message, e.g. 'sh .deploy-wpengine.sh -m \"Phase 2 beta\"'${RESET}"
+    echo -e "${RED}Please provide a commit message, e.g. 'sh deploy-wpengine.sh -m \"Phase 2 beta\"'${RESET}"
     exit 1
   fi
 

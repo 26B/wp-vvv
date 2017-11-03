@@ -3,7 +3,7 @@
 # Intended to deploy a Composer controlled repo to a specific branch on the
 # same remote or not.
 #
-# Usage: ./deploy-git.sh -e environment -d destination
+# Usage: ./deploy-git.sh -e <environment> -d <destination>
 #
 # Options:
 # - environment, -e: current branch name [default]
@@ -17,10 +17,6 @@
 # TODO: Handle Git submodules
 
 (
-  # Uncomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
 
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)

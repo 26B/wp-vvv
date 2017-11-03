@@ -5,10 +5,6 @@
 # Usage: ./deploy-rsync.sh -t <target>
 
 (
-  # URESETomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
 

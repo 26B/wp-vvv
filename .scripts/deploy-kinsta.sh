@@ -2,15 +2,11 @@
 
 # Intended to deploy a Composer controlled repo to Kinsta.
 #
-# Usage: ./deploy-kinsta.sh -s sitename -l
+# Usage: ./deploy-kinsta.sh -s <sitename> -l
 
 # TODO: Handle Git submodules
 
 (
-  # Uncomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
 
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
