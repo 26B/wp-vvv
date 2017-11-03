@@ -3,7 +3,7 @@
 # Intended to deploy a Composer controlled repo to a specific branch on the
 # same remote or not.
 #
-# Usage: ./deploy-kinsta.sh -e environment -d destination
+# Usage: ./deploy-git.sh -e environment -d destination
 #
 # Options:
 # - environment, -e: current branch name [default]
