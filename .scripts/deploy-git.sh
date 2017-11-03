@@ -32,7 +32,7 @@
 
   # SETUP AND SANITY CHECKS
   # =======================
-  while getopts e:d:live OPTION 2>/dev/null; do
+  while getopts e:d: OPTION 2>/dev/null; do
     case $OPTION
     in
       e) ENVIRONMENT=${OPTARG};;
@@ -79,7 +79,6 @@
   cd "$BUILD_DIR"
 
   echo -e "${YELLOW}Building the project for deployment...${RESET}"
-  ls .scripts/
   bash $ROOT_DIR/.scripts/build.sh -l
 
   if [ 0 != $? ]; then
@@ -90,7 +89,7 @@
   # DEPLOY THE PROJECT
   # ==================
 
-  echo -e "${YELLOW}Cloning the project for deploying...${RESET}"
+  echo -e "${YELLOW}Cloning the project for deployment...${RESET}"
 
   git clone --recursive "$DEPLOY_REPO" "$DIST_DIR"
   if [ 0 != $? ]; then

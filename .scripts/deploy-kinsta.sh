@@ -84,7 +84,7 @@
   # DEPLOY THE PROJECT
   # ==================
 
-  echo -e "${YELLOW}Cloning the project for deploying...${RESET}"
+  echo -e "${YELLOW}Cloning the project for deployment...${RESET}"
 
   git clone --recursive "$DEPLOY_REPO" "$DIST_DIR"
   if [ 0 != $? ]; then

@@ -25,5 +25,5 @@ if [ $LIVE -eq 1 ]; then
   OPT_COMPOSER="--no-dev --optimize-autoloader"
 fi
 
-echo -e "${GREEN}Installing Composer dependencies…${NC}"
+echo -e "${GREEN}Installing Composer dependencies...${NC}"
 composer install --no-interaction $OPT_COMPOSER
