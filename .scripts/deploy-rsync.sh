@@ -26,7 +26,7 @@
   # ===========
 
   if [ -z "$DEPLOY_TARGET" ]; then
-    echo -e "${RED}Please provide a deploy target, e.g. 'sh _deploy-rsync.sh -t \"deploy-target\"'${RESET}"
+    echo -e "${RED}Please provide a deploy target, e.g. 'sh deploy-rsync.sh -t \"deploy-target\"'${RESET}"
     exit 2
   fi
 
