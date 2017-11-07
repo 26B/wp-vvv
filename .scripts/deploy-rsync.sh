@@ -5,10 +5,6 @@
 # Usage: ./deploy-rsync.sh -t <target>
 
 (
-  # URESETomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
 
@@ -30,7 +26,7 @@
   # ===========
 
   if [ -z "$DEPLOY_TARGET" ]; then
-    echo -e "${RED}Please provide a deploy target, e.g. 'sh _deploy-rsync.sh -t \"deploy-target\"'${RESET}"
+    echo -e "${RED}Please provide a deploy target, e.g. 'sh deploy-rsync.sh -t \"deploy-target\"'${RESET}"
     exit 2
   fi
 

@@ -3,7 +3,7 @@
 # Intended to deploy a Composer controlled repo to a specific branch on the
 # same remote or not.
 #
-# Usage: ./deploy-kinsta.sh -e environment -d destination
+# Usage: ./deploy-git.sh -e <environment> -d <destination>
 #
 # Options:
 # - environment, -e: current branch name [default]
@@ -17,10 +17,6 @@
 # TODO: Handle Git submodules
 
 (
-  # Uncomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
 
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
@@ -36,7 +32,7 @@
 
   # SETUP AND SANITY CHECKS
   # =======================
-  while getopts e:d:live OPTION 2>/dev/null; do
+  while getopts e:d: OPTION 2>/dev/null; do
     case $OPTION
     in
       e) ENVIRONMENT=${OPTARG};;
@@ -83,7 +79,6 @@
   cd "$BUILD_DIR"
 
   echo -e "${YELLOW}Building the project for deployment...${RESET}"
-  ls .scripts/
   bash $ROOT_DIR/.scripts/build.sh -l
 
   if [ 0 != $? ]; then
@@ -94,7 +89,7 @@
   # DEPLOY THE PROJECT
   # ==================
 
-  echo -e "${YELLOW}Cloning the project for deploying...${RESET}"
+  echo -e "${YELLOW}Cloning the project for deployment...${RESET}"
 
   git clone --recursive "$DEPLOY_REPO" "$DIST_DIR"
   if [ 0 != $? ]; then
