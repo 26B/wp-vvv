@@ -5,15 +5,11 @@
 # Codeship is used as the Continuous Integration (CI) tool in this case, but it
 # may easily work with other services.
 #
-# Usage: ./deploy-codeship-wpengine.sh -m <commit message> -s <site> [--live]
+# Usage: ./deploy-codeship-wpengine.sh -m <commit message> -s <sitename> [--live]
 
 # TODO: Handle Git submodules
 
 (
-  # URESETomment these lines to profile the script
-  # set -x
-  # PS4='$(date "+%s.%N ($LINENO) + ")'
-
   WHOAMI=`whoami`
 
   ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
@@ -42,6 +38,7 @@
   rm -rf "$DEPLOY_DIR"
 
   # VALIDATIONS
+  # ===========
 
   echo -e "Checking you have a Git user setup..."
   if [[ $(git config --list) != *user.email* || $(git config --list) != *user.name* ]]; then
@@ -50,21 +47,21 @@
   fi
 
   if [ -z "$COMMIT_MSG" ]; then
-    echo -e "${RED}Please provide a commit message, e.g. 'sh .deploy-codeship-wpengine.sh -m \"Phase 2 beta\"'${RESET}"
+    echo -e "${RED}Please provide a commit message, e.g. 'sh deploy-codeship-wpengine.sh -m \"Phase 2 beta\"'${RESET}"
     exit 1
   fi
 
   if [ -z "$SITENAME" ]; then
-    echo -e "${RED}Please provide a site name within WP Engine, this will control the Git repo we clone and commit to, e.g. 'sh _deploy-wpengine.sh -s \"sitename\"'${RESET}"
+    echo -e "${RED}Please provide a site name within WP Engine, this will control the Git repo we clone and commit to, e.g. 'sh deploy-wpengine.sh -s \"sitename\"'${RESET}"
     exit 2
   fi
 
-  echo -e "${YELLOW}Testing authentication with $SITENAME on WPEngine...${RESET}"
+  echo -e "${YELLOW}Testing authentication with $SITENAME on WP Engine...${RESET}"
   # The quickest command I can find is `help`, but it still takes approx 2 seconds
-  # (The command is executed on Gitolite at the WPEngine end, AFAICT)
+  # (The command is executed on Gitolite at the WP Engine end, AFAICT)
   ssh -o "BatchMode yes" git@git.wpengine.com help 2>/dev/null 1>&2
   if [ 0 != $? ]; then
-    echo -e "${RED}You need to add some SSH keys to allow the '$WHOAMI' user to deploy to $SITENAME on WPEngine${RESET}"
+    echo -e "${RED}You need to add some SSH keys to allow the '$WHOAMI' user to deploy to $SITENAME on WP Engine${RESET}"
     exit 3
   fi
 

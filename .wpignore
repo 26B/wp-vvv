@@ -83,12 +83,7 @@ sitemap.xml.gz
 /xmlrpc.php
 
 # WordPress Themes
-/wp-content/themes/twentyten/
-/wp-content/themes/twentyeleven/
-/wp-content/themes/twentytwelve/
-/wp-content/themes/twentythirteen/
-/wp-content/themes/twentyfourteen/
-/wp-content/themes/twentyfifteen/
+/wp-content/themes/twenty*
 /wp-content/themes/index.php
 
 # WordPress Plugins
