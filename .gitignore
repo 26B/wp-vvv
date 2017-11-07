@@ -59,31 +59,6 @@ com_crashlytics_export_strings.xml
 # WordPress #
 #############
 /core/
-wp-config.php
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
-wp-content/languages/
-
-# WP Engine #
-#############
-.smushit-status
-.gitattributes
-_wpeprivate
-wp-content/object-cache.php
-wp-content/mu-plugins/mu-plugin.php
-wp-content/mu-plugins/slt-force-strong-passwords.php
-wp-content/mu-plugins/limit-login-attempts
-wp-content/mu-plugins/wpengine-common
-wp-content/mysql.sql
-
-# WP Core (as of 3.4.1) #
-#########################
 /db-config.php
 /index.php
 /license.txt
@@ -94,6 +69,7 @@ wp-content/mysql.sql
 /wp-blog-header.php
 /wp-comments-post.php
 /wp-commentsrss2.php
+/wp-config.php
 /wp-config-sample.php
 /wp-cron.php
 /wp-feed.php
@@ -112,15 +88,24 @@ wp-content/mysql.sql
 /xmlrpc.php
 /wp-admin
 /wp-includes
+/wp-content/advanced-cache.php
 /wp-content/index.php
+/wp-content/backup-db/*
+/wp-content/blogs.dir/
+/wp-content/cache/*
+/wp-content/cache/supercache/*
+/wp-content/languages/
 /wp-content/languages/plugins/debug-bar*
 /wp-content/languages/plugins/p3-profiler*
 /wp-content/languages/plugins/query-monitor*
 /wp-content/languages/plugins/user-switching*
 /wp-content/languages/themes/twenty*
-/wp-content/themes/twenty*
-/wp-content/themes/index.php
 /wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-content/themes/twenty*
+/wp-content/upgrade/*
+/wp-content/uploads/
+/wp-content/wp-cache-config.php
 
 # Packages #
 ############
