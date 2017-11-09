@@ -61,7 +61,7 @@ if ! $(noroot wp core is-installed); then
     INSTALL_COMMAND="install"
   fi
 
-  noroot wp core ${INSTALL_COMMAND} --url="${DOMAIN}" --quiet --title="${SITE_TITLE}" --admin_name=admin --admin_email="admin@wp-seed.dev" --admin_password="password"
+  noroot wp core ${INSTALL_COMMAND} --url="${DOMAIN}" --quiet --title="${SITE_TITLE}" --admin_name=admin --admin_email="admin@${VVV_SITE_NAME}.dev" --admin_password="password"
 
   # Fallback theme.
   if [ "${THEME}" = "" ]; then
