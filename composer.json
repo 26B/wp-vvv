@@ -33,14 +33,14 @@
   "extra": {
     "installer-paths": {
       "vendor/{$vendor}/{$name}/": ["goblindegook/syllables"],
-      "content/mu-plugins/{$name}/": [
+      "wp-content/mu-plugins/{$name}/": [
         "wpackagist-plugin/disable-emojis",
         "wpackagist-plugin/disable-xml-rpc"
       ],
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "core"
+    "wordpress-install-dir": "wordpress"
   },
   "config": {
     "sort-packages": true

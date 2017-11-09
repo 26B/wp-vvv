@@ -27,7 +27,7 @@ require_once 'wp-config-vvv.php';
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/core/' );
+	define( 'ABSPATH', dirname( __FILE__ ) . '/wordpress/' );
 }
 
 /** Sets up WordPress vars and included files. */

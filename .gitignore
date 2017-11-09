@@ -64,7 +64,7 @@ Thumbs.db
 .cvs
 
 # wordpress core
-/core/
+/wordpress/
 
 # wordpress specific
 content/uploads/

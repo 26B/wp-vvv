@@ -24,7 +24,7 @@ echo -e "\n/** Authentication Unique Keys and Salts. */" >> wp-config-vvv.php
 echo -e ${SALTS} >> wp-config-vvv.php
 
 echo -e "\n/** Define site URLs. */" >> wp-config-vvv.php
-echo -e "define( 'WP_SITEURL', 'http://"${DOMAIN}"/core' );" >> wp-config-vvv.php
+echo -e "define( 'WP_SITEURL', 'http://"${DOMAIN}"/wordpress' );" >> wp-config-vvv.php
 echo -e "define( 'WP_HOME', 'http://"${DOMAIN}"' );" >> wp-config-vvv.php
 
 echo -e "\n/** Define debug constants. */" >> wp-config-vvv.php
@@ -52,9 +52,8 @@ echo -e "\n/** Define local environment. */" >> wp-config-vvv.php
 echo -e "define( 'WP_ENV', 'development' );" >> wp-config-vvv.php
 echo -e "define( 'WP_LOCAL_DEV', WP_ENV === 'development' );" >> wp-config-vvv.php
 
-echo -e "\n/** Define content folder. */" >> wp-config-vvv.php
-echo -e "define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );" >> wp-config-vvv.php
-echo -e "define( 'WP_CONTENT_URL', WP_HOME . '/content' );" >> wp-config-vvv.php
+echo -e "define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );" >> wp-config-vvv.php
+echo -e "define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );" >> wp-config-vvv.php
 
 echo -e "\n/** Disallow file editing. */" >> wp-config-vvv.php
 echo -e "define( 'DISALLOW_FILE_EDIT', true );" >> wp-config-vvv.php
