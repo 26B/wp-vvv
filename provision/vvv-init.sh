@@ -3,6 +3,7 @@
 ## CONFIGURATION ##
 
 DOMAIN=`get_primary_host "${VVV_SITE_NAME}".dev`
+DOMAINS=`get_hosts "${DOMAIN}"`
 SITE_TITLE=`get_config_value 'site_title' "${DOMAIN}"`
 WP_TYPE=`get_config_value 'wp_type' 'single'`
 DB_NAME=`get_config_value 'db_name' "${VVV_SITE_NAME}_dev"`
@@ -62,16 +63,17 @@ if ! $(noroot wp core is-installed); then
   fi
 
   noroot wp core ${INSTALL_COMMAND} --url="${DOMAIN}" --quiet --title="${SITE_TITLE}" --admin_name=admin --admin_email="admin@${VVV_SITE_NAME}.dev" --admin_password="password"
-
-  # Fallback theme.
-  if [ "${THEME}" = "" ]; then
-    noroot wp theme install --activate twentyseventeen
-  fi
 else
   echo "Updating WordPress..."
   cd ${VVV_PATH_TO_SITE}
   noroot wp core update
   noroot wp core update-db
+fi
+
+if [ "${THEME}" = "" ]; then
+  noroot wp theme install --activate twentyseventeen
+else
+  noroot wp theme activate ${THEME}
 fi
 
 noroot wp plugin activate ${PLUGINS}
