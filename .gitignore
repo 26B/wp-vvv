@@ -1,33 +1,46 @@
-# logs
-/logs
-*.log
-
-# dependencies
+# Dependencies #
+################
 vendor/
 node_modules/
 
-# build directories
+# Build directories #
+#####################
+.sass-cache
 /_deploy_*/
 
-# vvv
+# VVV #
+#######
 /log/
 /wp-config-vvv.php
 
-# plugins
-/content/mu-plugins/*
-!/content/mu-plugins/autoload.php
-!/content/mu-plugins/fix-annoyances.php
-!/content/mu-plugins/fix-svg.php
-!/content/mu-plugins/fix-https.php
-!/content/mu-plugins/loader.php
-/content/plugins/*
+# Web Server #
+##############
+.htaccess
 
-# themes
-/content/themes/*
+# WP Plugins #
+##############
+/wp-content/mu-plugins/*
+!/wp-content/mu-plugins/autoload.php
+!/wp-content/mu-plugins/fix-annoyances.php
+!/wp-content/mu-plugins/fix-svg.php
+!/wp-content/mu-plugins/fix-https.php
+!/wp-content/mu-plugins/loader.php
+/wp-content/plugins/*
+
+# WP Themes #
+#############
+/wp-content/themes/*
 # Include your theme like this:
-#!/content/themes/your-theme
+#!/wp-content/themes/your-theme
 
-# jetbrains
+# IDEs #
+########
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
 .idea/
 .idea_modules/
 *.ipr
@@ -35,61 +48,19 @@ node_modules/
 *.iml
 atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
-
-# vim
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-
-# sublime text
 *.sublime-workspace
+.vscode
 
-# system files
-.DS_Store
-._*
-.AppleDouble
-.LSOverride
-.Spotlight-V100
-.Trashes
-*.bak
-*.swp
-*.orig
-Thumbs.db
-
-# vcs
+# VCS #
+#######
 .svn
 .cvs
 
-# wordpress core
+# WordPress #
+#############
 /core/
-
-# wordpress specific
-content/uploads/
-content/blogs.dir/
-content/upgrade/*
-content/backup-db/*
-content/advanced-cache.php
-content/wp-cache-config.php
-content/cache/*
-content/cache/supercache/*
-content/languages/
-
-# wpengine specific
-.smushit-status
-.gitattributes
-_wpeprivate
-content/object-cache.php
-content/mu-plugins/mu-plugin.php
-content/mu-plugins/slt-force-strong-passwords.php
-content/mu-plugins/limit-login-attempts
-content/mu-plugins/wpengine-common
-content/mysql.sql
-
-# wp core (as of 3.4.1)
 /db-config.php
+/index.php
 /license.txt
 /readme.html
 /wp-activate.php
@@ -98,6 +69,7 @@ content/mysql.sql
 /wp-blog-header.php
 /wp-comments-post.php
 /wp-commentsrss2.php
+/wp-config.php
 /wp-config-sample.php
 /wp-cron.php
 /wp-feed.php
@@ -116,51 +88,55 @@ content/mysql.sql
 /xmlrpc.php
 /wp-admin
 /wp-includes
-/content/index.php
-/content/languages/themes/twentytwelve*
-/content/languages/themes/twentythirteen*
-/content/languages/themes/twentyfourteen*
-/content/languages/themes/twentyfifteen*
-/content/themes/twentyten
-/content/themes/twentyeleven
-/content/themes/twentytwelve
-/content/themes/twentythirteen
-/content/themes/twentyfourteen
-/content/themes/twentyfifteen
-/content/themes/index.php
-/content/plugins/index.php
+/wp-content/advanced-cache.php
+/wp-content/index.php
+/wp-content/backup-db/*
+/wp-content/blogs.dir/
+/wp-content/cache/*
+/wp-content/cache/supercache/*
+/wp-content/languages/
+/wp-content/languages/plugins/debug-bar*
+/wp-content/languages/plugins/p3-profiler*
+/wp-content/languages/plugins/query-monitor*
+/wp-content/languages/plugins/user-switching*
+/wp-content/languages/themes/twenty*
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-content/themes/twenty*
+/wp-content/upgrade/*
+/wp-content/uploads/
+/wp-content/wp-cache-config.php
 
-# large/disallowed file types
-# a CDN should be used for these
-*.hqx
-*.bin
-*.exe
-*.dll
-*.deb
+# Packages #
+############
+*.7z
 *.dmg
+*.gz
+*.bz2
 *.iso
-*.img
-*.msi
-*.msp
-*.msm
-*.mid
-*.midi
-*.kar
-*.mp3
-*.ogg
-*.m4a
-*.ra
-*.3gpp
-*.3gp
-*.mp4
-*.mpeg
-*.mpg
-*.mov
-*.webm
-*.flv
-*.m4v
-*.mng
-*.asx
-*.asf
-*.wmv
-*.avi
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+/logs
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+*.bak
+*.swp
+*.orig
