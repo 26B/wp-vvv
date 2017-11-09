@@ -92,7 +92,7 @@ if ( defined( 'DOMAIN_MAPPING' ) ) {
 
 	return sprintf(
 		'%s%s',
-		\network_site_url( 'core/wp-admin/network/', 'admin' ),
+		\network_site_url( 'wordpress/wp-admin/network/', 'admin' ),
 		ltrim( $path, '/' )
 	);
 }, 10, 2 );
