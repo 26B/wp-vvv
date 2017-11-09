@@ -76,4 +76,7 @@ fi
 
 noroot wp plugin activate ${PLUGINS}
 
+cp -f "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf.tmpl" "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf"
+sed -i "s#{{DOMAINS_HERE}}#${DOMAINS}#" "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf"
+
 echo "$SITE_TITLE site is installed ¯\_(ツ)_/¯"
