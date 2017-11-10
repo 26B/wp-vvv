@@ -5,6 +5,10 @@
     {
       "name": "Pedro Duarte",
       "email": "xipasduarte@gmail.com"
+    },
+    {
+      "name": "Sérgio Santos",
+      "email": "me@s3rgiosan.com"
     }
   ],
   "repositories": [
@@ -15,32 +19,34 @@
   ],
   "require": {
     "composer-plugin-api": "^1.1",
-    "goblindegook/syllables": "~0.3",
+    "goblindegook/syllables": "^0.3",
     "johnpbloch/wordpress": "@stable",
-    "wpackagist-plugin/akismet": "~3.1",
-    "wpackagist-plugin/disable-emojis": "~1.5",
-    "wpackagist-plugin/disable-xml-rpc": "~1.0",
-    "wpackagist-plugin/force-regenerate-thumbnails": "~2.0"
+    "wpackagist-plugin/akismet": "^3.1",
+    "wpackagist-plugin/disable-emojis": "^1.7",
+    "wpackagist-plugin/disable-xml-rpc": "^1.0",
+    "wpackagist-plugin/regenerate-thumbnails": "^2.3"
   },
   "require-dev": {
-    "rarst/laps": "~1.2",
-    "wp-sync-db/wp-sync-db": "dev-master",
-    "wp-sync-db/wp-sync-db-media-files": "dev-master",
-    "wpackagist-plugin/redis-cache": "^1.3",
-    "wpackagist-plugin/wp-hydra": "~1.1",
-    "wpackagist-plugin/wordpress-importer": "^0.6.3"
+    "wpackagist-plugin/debug-bar": "^0.9",
+    "wpackagist-plugin/debug-bar-actions-and-filters-addon": "^1.5",
+    "wpackagist-plugin/debug-bar-list-dependencies": "^1.1",
+    "wpackagist-plugin/debug-bar-post-types": "^1.3",
+    "wpackagist-plugin/p3-profiler": "^1.5",
+    "wpackagist-plugin/query-monitor": "^2.13",
+    "wpackagist-plugin/user-switching": "^1.0",
+    "wpackagist-plugin/wp-hydra": "^1.1"
   },
   "extra": {
     "installer-paths": {
       "vendor/{$vendor}/{$name}/": ["goblindegook/syllables"],
-      "content/mu-plugins/{$name}/": [
+      "wp-content/mu-plugins/{$name}/": [
         "wpackagist-plugin/disable-emojis",
         "wpackagist-plugin/disable-xml-rpc"
       ],
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "core"
+    "wordpress-install-dir": "wordpress"
   },
   "config": {
     "sort-packages": true
