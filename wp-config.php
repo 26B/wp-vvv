@@ -22,7 +22,6 @@
 /** Add the generated VVV definitions. */
 require_once 'wp-config-vvv.php';
 
-
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

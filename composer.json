@@ -38,13 +38,19 @@
   },
   "extra": {
     "installer-paths": {
-      "vendor/{$vendor}/{$name}/": ["goblindegook/syllables"],
+      "vendor/{$vendor}/{$name}/": [
+        "goblindegook/syllables"
+      ],
       "wp-content/mu-plugins/{$name}/": [
         "wpackagist-plugin/disable-emojis",
         "wpackagist-plugin/disable-xml-rpc"
       ],
-      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "wordpress"
   },

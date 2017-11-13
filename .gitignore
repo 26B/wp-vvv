@@ -13,10 +13,6 @@ node_modules/
 /log/
 /wp-config-vvv.php
 
-# Web Server #
-##############
-.htaccess
-
 # WP Plugins #
 ##############
 /wp-content/mu-plugins/*
@@ -58,7 +54,7 @@ com_crashlytics_export_strings.xml
 
 # WordPress #
 #############
-/core/
+/wordpress/
 /db-config.php
 /index.php
 /license.txt

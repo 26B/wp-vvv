@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "WordPress VVV 2 project boilerplate.",
   "license": "See license in LICENSE",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:WP-Seed/wp-seed.git"
-  },
+  "repository": "git@github.com:WP-Seed/wp-seed.git",
   "devDependencies": {},
   "dependencies": {}
 }
