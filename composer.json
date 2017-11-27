@@ -21,7 +21,6 @@
     "composer-plugin-api": "^1.1",
     "goblindegook/syllables": "^0.3",
     "johnpbloch/wordpress": "@stable",
-    "wpackagist-plugin/akismet": "^3.1",
     "wpackagist-plugin/disable-emojis": "^1.7",
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
     "wpackagist-plugin/regenerate-thumbnails": "^2.3"
