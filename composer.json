@@ -21,11 +21,14 @@
     "composer-plugin-api": "^1.1",
     "goblindegook/syllables": "^0.3",
     "johnpbloch/wordpress": "@stable",
+    "mgargano/non-production-robots-ignore": "^0.1",
     "wpackagist-plugin/disable-emojis": "^1.7",
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
     "wpackagist-plugin/regenerate-thumbnails": "^2.3"
   },
   "require-dev": {
+    "norcross/airplane-mode": "^0.2",
+    "rarst/laps": "^1.4",
     "wpackagist-plugin/debug-bar": "^0.9",
     "wpackagist-plugin/debug-bar-actions-and-filters-addon": "^1.5",
     "wpackagist-plugin/debug-bar-list-dependencies": "^1.1",
@@ -41,6 +44,7 @@
         "goblindegook/syllables"
       ],
       "wp-content/mu-plugins/{$name}/": [
+        "mgargano/non-production-robots-ignore",
         "wpackagist-plugin/disable-emojis",
         "wpackagist-plugin/disable-xml-rpc"
       ],
