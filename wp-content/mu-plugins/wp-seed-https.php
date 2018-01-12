@@ -1,8 +1,8 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: Fix HTTPS
- * Description: Fixes and improves HTTPS support.
+ * Plugin Name: HTTPS power-up
+ * Description: Improves and fixes the default HTTPS support.
  * Version:     1.0.0
  * Author:      WP-Seed
  * Author URI:  https://github.com/WP-Seed
@@ -19,9 +19,11 @@ namespace WPSeed\WP\Plugin\HTTPS;
  * @return array          Possibly-modified source data.
  */
 function wp_calculate_image_srcset( $sources ) {
+
 	foreach ( $sources as &$source ) {
 		$source['url'] = \set_url_scheme( $source['url'], \is_ssl() ? 'https' : 'http' );
 	}
+
 	return $sources;
 }
 \add_filter( 'wp_calculate_image_srcset', '\WPSeed\WP\Plugin\HTTPS\wp_calculate_image_srcset', 10, 1 );

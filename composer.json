@@ -15,14 +15,20 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/pressjitsu/wp-transients-cleaner"
     }
   ],
   "require": {
     "composer-plugin-api": "^1.1",
+    "dg/composer-cleaner": "^1.1",
     "goblindegook/syllables": "^0.3",
     "johnpbloch/wordpress": "@stable",
-    "wpackagist-plugin/disable-emojis": "^1.7",
-    "wpackagist-plugin/disable-xml-rpc": "^1.0",
+    "pressjitsu/wp-transients-cleaner": "@stable",
+    "wpackagist-plugin/force-strong-passwords": "^1.7",
+    "wpackagist-plugin/limit-login-attempts": "^1.7",
     "wpackagist-plugin/regenerate-thumbnails": "^2.3"
   },
   "require-dev": {
@@ -37,19 +43,14 @@
   },
   "extra": {
     "installer-paths": {
-      "vendor/{$vendor}/{$name}/": [
-        "goblindegook/syllables"
-      ],
+      "vendor/{$vendor}/{$name}/": ["goblindegook/syllables"],
       "wp-content/mu-plugins/{$name}/": [
-        "wpackagist-plugin/disable-emojis",
-        "wpackagist-plugin/disable-xml-rpc"
+        "pressjitsu/wp-transients-cleaner",
+        "wpackagist-plugin/force-strong-passwords",
+        "wpackagist-plugin/limit-login-attempts"
       ],
-      "wp-content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "wp-content/themes/{$name}/": [
-        "type:wordpress-theme"
-      ]
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "wordpress"
   },

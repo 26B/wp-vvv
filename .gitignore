@@ -16,11 +16,8 @@ node_modules/
 # WP Plugins #
 ##############
 /wp-content/mu-plugins/*
-!/wp-content/mu-plugins/autoload.php
-!/wp-content/mu-plugins/fix-annoyances.php
-!/wp-content/mu-plugins/fix-svg.php
-!/wp-content/mu-plugins/fix-https.php
-!/wp-content/mu-plugins/loader.php
+!/wp-content/mu-plugins/pomodoro.php
+!/wp-content/mu-plugins/wp-seed-*.php
 /wp-content/plugins/*
 
 # WP Themes #
