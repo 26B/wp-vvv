@@ -3,7 +3,7 @@
  * @wordpress-plugin
  * Plugin Name: MU Plugin Loader
  * Description: Loads the MU plugins required to run the site.
- * Version:     1.1.0
+ * Version:     1.0.0
  * Author:      WP-Seed
  * Author URI:  https://github.com/WP-Seed/
  * License:     GPL-2.0+

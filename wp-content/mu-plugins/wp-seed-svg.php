@@ -1,8 +1,8 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: Fix SVG
- * Description: Fixes and improves SVG support.
+ * Plugin Name: SVG power-up
+ * Description: Improves and fixes the default SVG support.
  * Version:     1.0.0
  * Author:      WP-Seed
  * Author URI:  https://github.com/WP-Seed
