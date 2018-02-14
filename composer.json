@@ -26,12 +26,13 @@
     "dg/composer-cleaner": "^1.1",
     "goblindegook/syllables": "^0.3",
     "johnpbloch/wordpress": "@stable",
-    "pressjitsu/wp-transients-cleaner": "@stable",
+    "pressjitsu/wp-transients-cleaner": "dev-master",
     "wpackagist-plugin/force-strong-passwords": "^1.7",
     "wpackagist-plugin/limit-login-attempts": "^1.7",
     "wpackagist-plugin/regenerate-thumbnails": "^2.3"
   },
   "require-dev": {
+    "rarst/laps": "^1.4",
     "wpackagist-plugin/debug-bar": "^0.9",
     "wpackagist-plugin/debug-bar-actions-and-filters-addon": "^1.5",
     "wpackagist-plugin/debug-bar-list-dependencies": "^1.1",
@@ -47,7 +48,8 @@
       "wp-content/mu-plugins/{$name}/": [
         "pressjitsu/wp-transients-cleaner",
         "wpackagist-plugin/force-strong-passwords",
-        "wpackagist-plugin/limit-login-attempts"
+        "wpackagist-plugin/limit-login-attempts",
+        "type:wordpress-muplugin"
       ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
