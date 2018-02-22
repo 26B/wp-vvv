@@ -33,6 +33,7 @@
   },
   "require-dev": {
     "rarst/laps": "^1.4",
+    "squizlabs/php_codesniffer": "^3.2",
     "wpackagist-plugin/debug-bar": "^0.9",
     "wpackagist-plugin/debug-bar-actions-and-filters-addon": "^1.5",
     "wpackagist-plugin/debug-bar-list-dependencies": "^1.1",
