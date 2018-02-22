@@ -38,6 +38,7 @@
     "wpackagist-plugin/debug-bar-actions-and-filters-addon": "^1.5",
     "wpackagist-plugin/debug-bar-list-dependencies": "^1.1",
     "wpackagist-plugin/debug-bar-post-types": "^1.3",
+    "wpackagist-plugin/duplicate-post": "^3.2",
     "wpackagist-plugin/p3-profiler": "^1.5",
     "wpackagist-plugin/query-monitor": "^2.13",
     "wpackagist-plugin/user-switching": "^1.0",
