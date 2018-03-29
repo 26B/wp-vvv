@@ -3,7 +3,7 @@
  * @wordpress-plugin
  * Plugin Name: WordPress power-up
  * Description: Improves and fixes WordPress core.
- * Version:     1.2.0
+ * Version:     1.3.0
  * Author:      WP-Seed
  * Author URI:  https://github.com/WP-Seed/
  * License:     GPL-2.0+
@@ -249,3 +249,13 @@ function dequeue_jquery_migrate( $scripts ) {
 }
 \add_action( 'wp_default_scripts', '\WPSeed\WP\Plugin\Core\dequeue_jquery_migrate' );
 
+/**
+ * Disable auto embed script.
+ *
+ * @since  1.3.0
+ * @return void
+ */
+function disable_oembed() {
+	\wp_deregister_script( 'wp-embed' );
+}
+\add_action( 'wp_footer', '\WPSeed\WP\Plugin\Core\disable_oembed' );
