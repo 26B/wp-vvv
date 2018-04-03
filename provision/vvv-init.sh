@@ -48,7 +48,7 @@ cd ${VVV_PATH_TO_SITE}
 
 # Build project dependencies.
 echo -e "\nBuilding project dependencies"
-noroot ./.scripts/build.sh
+noroot ./bin/build.sh
 
 # Core install.
 if ! $(noroot wp core is-installed); then

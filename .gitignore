@@ -10,14 +10,23 @@ node_modules/
 
 # VVV #
 #######
-/log/
+/log/*
 /wp-config-vvv.php
+
+# Docker #
+##########
+!/wordpress/.gitkeep
+/data/*
+!/data/.gitkeep
+/logs/*
+!/logs/.gitkeep
+docker-compose.override.yml
+/config/elasticsearch/plugins/*
+/config/wpsnapshots/.wpsnapshots.json
 
 # WP Plugins #
 ##############
 /wp-content/mu-plugins/*
-!/wp-content/mu-plugins/pomodoro.php
-!/wp-content/mu-plugins/wp-seed-*.php
 /wp-content/plugins/*
 
 # WP Themes #
