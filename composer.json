@@ -29,7 +29,7 @@
     "pressjitsu/wp-transients-cleaner": "dev-master",
     "wpackagist-plugin/force-strong-passwords": "^1.7",
     "wpackagist-plugin/limit-login-attempts": "^1.7",
-    "wpackagist-plugin/regenerate-thumbnails": "^2.3"
+    "wpackagist-plugin/regenerate-thumbnails": "^3.0"
   },
   "require-dev": {
     "rarst/laps": "^1.4",
