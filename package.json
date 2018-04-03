@@ -1,9 +1,0 @@
-{
-  "name": "wp-seed",
-  "version": "1.0.0",
-  "description": "WordPress VVV 2 project boilerplate.",
-  "license": "See license in LICENSE",
-  "repository": "git@github.com:WP-Seed/wp-seed.git",
-  "devDependencies": {},
-  "dependencies": {}
-}
