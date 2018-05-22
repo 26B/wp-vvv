@@ -40,27 +40,21 @@
     "wpackagist-plugin/debug-bar-post-types": "^2.0",
     "wpackagist-plugin/duplicate-post": "^3.2",
     "wpackagist-plugin/p3-profiler": "^1.5",
-    "wpackagist-plugin/query-monitor": "^2.13",
+    "wpackagist-plugin/query-monitor": "^3.0",
     "wpackagist-plugin/user-switching": "^1.0",
     "wpackagist-plugin/wp-hydra": "^1.1"
   },
   "extra": {
     "installer-paths": {
-      "vendor/{$vendor}/{$name}/": [
-        "goblindegook/syllables"
-      ],
+      "vendor/{$vendor}/{$name}/": ["goblindegook/syllables"],
       "wp-content/mu-plugins/{$name}/": [
         "pressjitsu/wp-transients-cleaner",
         "wpackagist-plugin/force-strong-passwords",
         "wpackagist-plugin/limit-login-attempts",
         "type:wordpress-muplugin"
       ],
-      "wp-content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "wp-content/themes/{$name}/": [
-        "type:wordpress-theme"
-      ]
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "wordpress"
   },
