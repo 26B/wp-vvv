@@ -1,21 +1,23 @@
 # Dependencies #
 ################
-vendor/
-node_modules/
+/vendor/
+/node_modules/
 
 # Build directories #
 #####################
 .sass-cache
-/_deploy_*/
+/release/
+sassdoc
+scss-lint-report.xml
+config.codekit
 
 # VVV #
 #######
-/log/*
+/log/
 /wp-config-vvv.php
 
 # Docker #
 ##########
-!/wordpress/.gitkeep
 /data/*
 !/data/.gitkeep
 /logs/*
@@ -24,16 +26,66 @@ docker-compose.override.yml
 /config/elasticsearch/plugins/*
 /config/wpsnapshots/.wpsnapshots.json
 
-# WP Plugins #
-##############
-/wp-content/mu-plugins/*
-/wp-content/plugins/*
-
-# WP Themes #
+# WordPress #
 #############
-/wp-content/themes/*
+/wordpress/db-config.php
+/wordpress/index.php
+/wordpress/license.txt
+/wordpress/readme.html
+/wordpress/wp-activate.php
+/wordpress/wp-app.php
+/wordpress/wp-atom.php
+/wordpress/wp-blog-header.php
+/wordpress/wp-comments-post.php
+/wordpress/wp-commentsrss2.php
+/wordpress/wp-config.php
+/wordpress/wp-config-sample.php
+/wordpress/wp-cron.php
+/wordpress/wp-feed.php
+/wordpress/wp-links-opml.php
+/wordpress/wp-load.php
+/wordpress/wp-login.php
+/wordpress/wp-mail.php
+/wordpress/wp-rdf.php
+/wordpress/wp-rss.php
+/wordpress/wp-rss2.php
+/wordpress/wp-pass.php
+/wordpress/wp-register.php
+/wordpress/wp-settings.php
+/wordpress/wp-signup.php
+/wordpress/wp-trackback.php
+/wordpress/xmlrpc.php
+/wordpress/wp-admin
+/wordpress/wp-includes
+/wordpress/wp-content/advanced-cache.php
+/wordpress/wp-content/index.php
+/wordpress/wp-content/backup-db/*
+/wordpress/wp-content/blogs.dir/
+/wordpress/wp-content/cache/*
+/wordpress/wp-content/cache/supercache/*
+/wordpress/wp-content/languages/
+/wordpress/wp-content/languages/plugins/debug-bar*
+/wordpress/wp-content/languages/plugins/p3-profiler*
+/wordpress/wp-content/languages/plugins/query-monitor*
+/wordpress/wp-content/languages/plugins/user-switching*
+/wordpress/wp-content/languages/themes/twenty*
+/wordpress/wp-content/mu-plugins/*
+!/wordpress/wp-content/mu-plugins/tsb-*
+/wordpress/wp-content/plugins/*
+/wordpress/wp-content/themes/*
+/wordpress/wp-content/upgrade/*
+/wordpress/wp-content/uploads/
+/wordpress/wp-content/wp-cache-config.php
+!/wordpress/wp-cli.local.yml
+
+# Include your mu-plugin like this:
+#!/wordpress/wp-content/mu-plugins/your-plugin
+
+# Include your plugin like this:
+#!/wordpress/wp-content/plugins/your-plugin
+
 # Include your theme like this:
-#!/wp-content/themes/your-theme
+#!/wordpress/wp-content/themes/your-theme
 
 # IDEs #
 ########
@@ -58,58 +110,6 @@ com_crashlytics_export_strings.xml
 #######
 .svn
 .cvs
-
-# WordPress #
-#############
-/wordpress/
-/db-config.php
-/index.php
-/license.txt
-/readme.html
-/wp-activate.php
-/wp-app.php
-/wp-atom.php
-/wp-blog-header.php
-/wp-comments-post.php
-/wp-commentsrss2.php
-/wp-config.php
-/wp-config-sample.php
-/wp-cron.php
-/wp-feed.php
-/wp-links-opml.php
-/wp-load.php
-/wp-login.php
-/wp-mail.php
-/wp-rdf.php
-/wp-rss.php
-/wp-rss2.php
-/wp-pass.php
-/wp-register.php
-/wp-settings.php
-/wp-signup.php
-/wp-trackback.php
-/xmlrpc.php
-/wp-admin
-/wp-includes
-/wp-content/advanced-cache.php
-/wp-content/index.php
-/wp-content/backup-db/*
-/wp-content/blogs.dir/
-/wp-content/cache/*
-/wp-content/cache/supercache/*
-/wp-content/languages/
-/wp-content/languages/plugins/debug-bar*
-/wp-content/languages/plugins/p3-profiler*
-/wp-content/languages/plugins/query-monitor*
-/wp-content/languages/plugins/user-switching*
-/wp-content/languages/themes/twenty*
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-content/themes/twenty*
-/wp-content/upgrade/*
-/wp-content/uploads/
-/wp-content/wp-cache-config.php
-/wp-content/wflogs/
 
 # Packages #
 ############
