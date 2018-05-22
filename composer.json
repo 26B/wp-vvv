@@ -1,6 +1,6 @@
 {
-  "name": "WP-Seed/wp-seed",
-  "description": "WordPress VVV 2 project boilerplate.",
+  "name": "26B/wp-vvv",
+  "description": "A Vagrant configuration for WordPress.",
   "authors": [
     {
       "name": "Pedro Duarte",

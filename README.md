@@ -1,4 +1,4 @@
-# VVV
+# WP-VVV
 
 This is a Vagrant configuration for WordPress.
 
@@ -13,19 +13,18 @@ this document.
 
 ## Requirements
 
-* [Vagrant](http://www.vagrantup.com)
-* [VirtualBox](https://www.virtualbox.org/)
+*   [Vagrant](http://www.vagrantup.com)
+*   [VirtualBox](https://www.virtualbox.org/)
 
 ## Setup
 
 This project should be added to the `www` directory in your VVV setup. If you've
-followed the guide to installing VVV, the directory may be reached by typing `cd
-vagrant-local/www` in the command line interface.
+followed the guide to installing VVV, the directory may be reached by typing `cd vagrant-local/www` in the command line interface.
 
 Now clone the project into the `www` folder:
 
 ```
-$ git clone git@github.com:WP-Seed/VVV.git my-project-name
+$ git clone git@github.com:26B/wp-vvv.git my-project-name
 ```
 
 This should create a new directory called `my-project-name` containing all the project
